@@ -3,7 +3,7 @@
   "displayName": "Verse Language Snippets",
   "description": "A collection of useful code snippets for the Verse programming language.",
   "version": "1.0.0",
-  "publisher": "bloomcreative",
+  "publisher": "Bloom Creative",
   "icon": "icon.png",
   "engines": {
     "vscode": "^1.85.0"
