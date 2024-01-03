@@ -1,0 +1,21 @@
+{
+  "name": "versesnippets",
+  "displayName": "Verse Language Snippets",
+  "description": "A collection of useful code snippets for the Verse programming language.",
+  "version": "1.0.0",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "verse",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
