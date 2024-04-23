@@ -16,11 +16,15 @@ A collection of useful code snippets for the Verse programming language.
 | `set`     | Property Setter                               |
 | `sub`     | Subscribe to an event                         |
 | `tag`     | Create a verse tag                            |
-| `tags`    | Retrieve all tagged objects                   |
+| `tags`    | Retrieve all tagged actors                    |
+| `tgf`     | A function that returns all tagged actors     |
 | `log`     | Print statement                               |
+| `logc`    | Print statement with color                    |
 | `cast`    | Cast to a type                                |
-| `fun`     | Create a function                             |
-| `sus`     | Create a suspending function                  |
+| `fun`     | Basic function definition                     |
+| `sus`     | Suspending function                           |
+| `af`      | Function that accepts an agent as parameter   |
+| `ovr`     | Overriding function                           |
 | `class`   | Create a class                                |
 | `foreach` | For loop over container                       |
 | `for`     | For loop over range                           |
@@ -41,6 +45,8 @@ A collection of useful code snippets for the Verse programming language.
 | `race`    | Race two or more async expressions            |
 | `rush`    | Rush two or more async expressions            |
 | `branch`  | Branch two or more expressions                |
+| `evnt`    | A parametric event definition                 |
+| `msg`     | Convert a primitive into a message            |
 
 ## Contributing
 

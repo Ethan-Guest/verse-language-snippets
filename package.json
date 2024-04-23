@@ -2,7 +2,7 @@
   "name": "versesnippets",
   "displayName": "Verse Language Snippets",
   "description": "A collection of useful code snippets for the Verse programming language.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publisher": "bloomcreative",
   "icon": "icon.png",
   "engines": {

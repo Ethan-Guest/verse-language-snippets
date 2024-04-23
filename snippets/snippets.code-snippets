@@ -1,233 +1,250 @@
 {
-	// Place your snippets for verse here. Each snippet is defined under a snippet name and has a prefix, body and 
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
-	// same ids are connected.
-	// Example:
+  // Place your snippets for verse here. Each snippet is defined under a snippet name and has a prefix, body and
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+  // same ids are connected.
+  // Example:
 
+  // COMMON
+  "Editable": {
+    "prefix": "edb",
+    "body": ["@editable\n${1:Name} : ${2:type} = ${3:value}{}\n$0"],
+    "description": "Generates a property with the @editable attribute."
+  },
 
-	// COMMON
-	"Editable": {
-		"prefix": "edb",
-		"body": [
-			"@editable\n${1:Name} : ${2:type} = ${3:value}{}\n$0"
-		],
-		"description": "Generates a property with the @editable attribute."
-	},
-	"Property": {
-		"prefix": "prop",
-		"body": [
-			"var ${1:Prop} : ${2:type} = ${3:value}\n$0"
-		],
-		"description": "Generates a property."
-	},
-	"Property Getter": {
-		"prefix": "get",
-		"body": [
-			"Get${1:Property}<public>()<transacts>:${2:any}=\n\treturn ${3:Property}$0"
-		],
-		"description": "Generates a getter method for a property."
-	},
-	"Property Setter": {
-		"prefix": "set",
-		"body": [
-			"Set${1:Property}<private>($2):void=\n\tset ${3:Property} = ${4:value}$0"
-		],
-		"description": "Generates a setter method for a property."
-	},
-	"Subscribe": {
-		"prefix": "sub",
-		"body": [
-			"${1:Device}.${2:Event}.Subscribe(${3:Handler})\n$0"
-		],
-		"description": "Subscribe to an event."
-	},
-	"Create a tag": {
-		"prefix": "tag",
-		"body": [
-			"${1:Value} := class(tag){}\n$0"
-		],
-		"description": "Create a tag."
-	},
-	"Get all tagged objects": {
-		"prefix": "tags",
-		"body": [
-			"${1:TaggedActors} := GetCreativeObjectsWithTag(${2:mytag}{})\n$0"
-		],
-		"description": "Retrieve all tagged objects."
-	},
-	"Print statement": {
-		"prefix": "log",
-		"body": [
-			"Print(\"$1\")"""
-		],
-		"description": "Print to console."
-	},
-	"Cast to a type": {
-		"prefix": "cast",
-		"body": [
-			"${1:Result} := ${2:type}[${3:type}]$0"
-		],
-		"description": "Cast to a type."
-	},
-	"Create a function": {
-		"prefix": "fun",
-		"body": [
-			"${1:Name}($2):${3:void}=\n\t$0"
-		],
-		"description": "Generate a function."
-	},
-	"Create a suspending function": {
-		"prefix": "sus",
-		"body": [
-			"${1:Name}($2)<suspends>:${3:void}=\n\t$0"
-		],
-		"description": "Generate a suspending function."
-	},
-	"Create a class": {
-		"prefix": "class",
-		"body": [
-			"${1:name} := class$2($3):\n\t$0"
-		],
-		"description": "Create a class."
-	},
-	
-	// CONTROL FLOW
-	"For loop over container": {
-		"prefix": "foreach",
-		"body": [
-			"for(${1:Value} : ${2:Container}):\n\t$0"
-		],
-		"description": "Create a foreach expression."
-	},
-	"For loop over range": {
-		"prefix": "for",
-		"body": [
-			"for(${1:I}:= ${2:0}..${3:99}):\n\t$0",
-		],
-		"description": "Create a for loop."
-	},
-	"For loop with filter": {
-		"prefix": "forfil",
-		"body": [
-			"for(${1:Value} : ${2:Container}, ${3:Value} <> ${4:Value}):\n\t$0"
-		],
-		"description": "Create a for loop with filter."
-	},
-	"Do while": {
-		"prefix": "do",
-		"body": [
-			"loop:\n\tif(${1:condition}):\n\t$0\tbreak"
-		],
-		"description": "Create a do while loop."
-	},
-	"If": {
-		"prefix": "if",
-		"body": [
-			"if($1):\n\t$0"
-		],
-		"description": "Create an if expression."
-	},
-	"If else": {
-		"prefix": "else",
-		"body": [
-			"if:\n\t$1\nelse:\n\t$0"
-		],
-		"description": "Create an if else expression."
-	},
-	"If then": {
-		"prefix": "then",
-		"body": [
-			"if:\n\t$1\nthen:\n\t$0"
-		],
-		"description": "Create an if then expression."
-	},
-	"Create a case expression statement": {
-		"prefix": "case",
-		"body": [
-			"case(${1:arg}):\n\t${2:0}=>\n\t\t${3:block:}\n\t${4:1}=>\n\t\t${5:block:}\n\t${6:_}=>\n\t\t${7:block:}\n$0"
-		],
-		"description": "Create a case expression."
-	},
-	
-	// MATH
-	"Vector2": {
-		"prefix": "vec2",
-		"body": [
-			"vector2{X:=${1:0.0},Y:=${2:0.0}}$0"
-		],
-		"description": "Create a vector2 object."
-	},
-	"Vector3": {
-		"prefix": "vec3",
-		"body": [
-			"vector3{X:=${1:0.0},Y:=${2:0.0},Z:=${3:0.0}}$0"
-		],
-		"description": "Create a vector3 object."
-	},
-	"Transform": {
-		"prefix": "tf",
-		"body": [
-			"${1:Transform} := ${2:Positional}.GetTransform()$0"
-		],
-		"description": "Retrieive the transfrom of a positional object."
-	},
-	"Translate": {
-		"prefix": "tl",
-		"body": [
-			"${1:Translation} := ${2:Positional}.GetTransform().Translation$0"
-		],
-		"description": "Retrieve the translation of a transform."
-	},
-	"Scale": {
-		"prefix": "sc",
-		"body": [
-			"${1:Scale} := ${2:Positional}.GetTransform().Scale$0"
-		],
-		"description": "Retrieve the scale of a transform."
-	},
-	"Rotate": {
-		"prefix": "rt",
-		"body": [
-			"${1:Rotation} := ${2:Positional}.GetTransform().Rotation$0"
-		],
-		"description": "Retreive the rotation of a transform."
-	},
+  "Property": {
+    "prefix": "prop",
+    "body": ["var ${1:Prop} : ${2:type} = ${3:value}$0"],
+    "description": "Generates a property."
+  },
 
-	// CONCURRENCY
-	"Sleep Function": {
-		"prefix": "sl",
-		"body": [
-			"Sleep(${1:0.0})"
-		],
-		"description": "Generate a sleep function."
-	},
-	"Sync": {
-		"prefix": "sync",
-		"body": [
-			"${1:SyncResults} := sync:\n\t${2:block:}\n\t${3:block:}$0"
-		],
-		"description": "Sync two or more async expressions."
-	},
-	"Race": {
-		"prefix": "race",
-		"body": [
-			"${1:Winner} := race:\n\t${2:block:}\n\t${3:block:}$0"
-		],
-		"description": "Race two or more async expressions."
-	},
-	"Rush": {
-		"prefix": "rush",
-		"body": [
-			"${1:RushResults} := rush:\n\t${2:block:}\n\t${3:block:}$0"
-		],
-		"description": "Rush two or more async expressions."
-	},
-	"Branch": {
-		"prefix": "branch",
-		"body": [
-			"${1:BranchResults} := branch:\n\t${2:block:}\n\t${3:block:}$0"
-		],
-		"description": "Branch two or more expressions."
-	},
+  "Property Getter": {
+    "prefix": "get",
+    "body": [
+      "Get${1:Property}<public>()<transacts>:${2:any}=\n\treturn ${3:Property}$0"
+    ],
+    "description": "Generates a getter method for a property."
+  },
+
+  "Property Setter": {
+    "prefix": "set",
+    "body": [
+      "Set${1:Property}<public>($2):void=\n\tset ${3:Property} = ${4:value}$0"
+    ],
+    "description": "Generates a setter method for a property."
+  },
+
+  "Subscribe": {
+    "prefix": "sub",
+    "body": ["${1:Device}.${2:Event}.Subscribe(${3:Handler})\n$0"],
+    "description": "Subscribe to an event."
+  },
+
+  "Create a tag": {
+    "prefix": "tag",
+    "body": ["${1:TagName} := class(tag){}\n$0"],
+    "description": "Create a tag."
+  },
+
+  "Get all tagged objects": {
+    "prefix": "tags",
+    "body": [
+      "${1:TaggedActors} := GetCreativeObjectsWithTag(${2:mytag}{})\n$0"
+    ],
+    "description": "Retrieve all tagged objects."
+  },
+
+  "Create a function that gets and casts actors with a specific tag.": {
+    "prefix": "tgf",
+    "body": [
+      "${1:GetActors}()<transacts>:[]${2:type}=\n\tvar ReturnArray : []${2:type} = array{}\n\tfor(Actor : GetCreativeObjectsWithTag(${3:my_tag}{})):\n\t\tif(CastedActor := ${2:type}[Actor]):\n\t\t\tset ReturnArray += array{CastedActor}\n\tReturnArray$0"
+    ],
+    "description": "Retrieve all tagged actors in a function."
+  },
+
+  "Print statement": {
+    "prefix": "log",
+    "body": ["Print(\"$1\")"],
+    "description": "Print to console."
+  },
+
+  "Print statement with color": {
+    "prefix": "logc",
+    "body": ["Print(\"$1\", ?Color := ${2:NamedColors.Green})"],
+    "description": "Print to console with color."
+  },
+
+  "Cast to a type": {
+    "prefix": "cast",
+    "body": ["${1:Result} := ${2:type}[${3:type}]$0"],
+    "description": "Cast to a type."
+  },
+
+  "Create a function": {
+    "prefix": "fun",
+    "body": ["${1:Name}($2):${3:void}=\n\t$0"],
+    "description": "Generate a function."
+  },
+
+  "Create a suspending function": {
+    "prefix": "sus",
+    "body": ["${1:Name}($2)<suspends>:${3:void}=\n\t$0"],
+    "description": "Generate a suspending function."
+  },
+
+  "Create a function that accepts an agent.": {
+    "prefix": "af",
+    "body": ["${1:Handler}(${2:InAgent : agent}):${3:void}=\n\t$0"],
+    "description": "Generate a function that accepts an agent."
+  },
+
+  "Create an overriding method": {
+    "prefix": "ovr",
+    "body": ["${1:Name}<override>($2):${3:void}=\n\t$0"],
+    "description": "Override a method."
+  },
+
+  "Create a class": {
+    "prefix": "class",
+    "body": ["${1:name} := class$2($3):\n\t$0"],
+    "description": "Create a class."
+  },
+
+  // CONTROL FLOW
+  "For loop over container": {
+    "prefix": "foreach",
+    "body": ["for(I->${1:Value} : ${2:Container}):\n\t$0"],
+    "description": "Create a foreach expression."
+  },
+
+  "For loop over range": {
+    "prefix": "for",
+    "body": ["for(${1:I} := ${2:0}..${3:99}):\n\t$0"],
+    "description": "Create a for loop."
+  },
+
+  "For loop with filter": {
+    "prefix": "forfil",
+    "body": [
+      "for(${1:Value} : ${2:Container}, ${3:Value} <> ${4:Value}):\n\t$0"
+    ],
+    "description": "Create a for loop with filter."
+  },
+
+  "Do while": {
+    "prefix": "do",
+    "body": ["loop:\n\tif(${1:condition}):\n\t$0\tbreak"],
+    "description": "Create a do while loop."
+  },
+
+  "If": {
+    "prefix": "if",
+    "body": ["if($1):\n\t$0"],
+    "description": "Create an if expression."
+  },
+
+  "If else": {
+    "prefix": "else",
+    "body": ["if:\n\t$1\nelse:\n\t$0"],
+    "description": "Create an if else expression."
+  },
+
+  "If then": {
+    "prefix": "then",
+    "body": ["if:\n\t$1\nthen:\n\t$0"],
+    "description": "Create an if then expression."
+  },
+
+  "Create a case expression statement": {
+    "prefix": "case",
+    "body": [
+      "case(${1:arg}):\n\t${2:0}=>\n\t\t${3:block:}\n\t${4:1}=>\n\t\t${5:block:}\n\t${6:_}=>\n\t\t${7:block:}\n$0"
+    ],
+    "description": "Create a case expression."
+  },
+
+  // MATH
+  "Vector2": {
+    "prefix": "vec2",
+    "body": ["vector2{X:=${1:0.0},Y:=${2:0.0}}$0"],
+    "description": "Create a vector2 object."
+  },
+
+  "Vector3": {
+    "prefix": "vec3",
+    "body": ["vector3{X:=${1:0.0},Y:=${2:0.0},Z:=${3:0.0}}$0"],
+    "description": "Create a vector3 object."
+  },
+
+  "Transform": {
+    "prefix": "tf",
+    "body": ["${1:Transform} := ${2:Positional}.GetTransform()$0"],
+    "description": "Retrieive the transfrom of a positional object."
+  },
+
+  "Translate": {
+    "prefix": "tl",
+    "body": [
+      "${1:Translation} := ${2:Positional}.GetTransform().Translation$0"
+    ],
+    "description": "Retrieve the translation of a transform."
+  },
+
+  "Scale": {
+    "prefix": "sc",
+    "body": ["${1:Scale} := ${2:Positional}.GetTransform().Scale$0"],
+    "description": "Retrieve the scale of a transform."
+  },
+
+  "Rotate": {
+    "prefix": "rt",
+    "body": ["${1:Rotation} := ${2:Positional}.GetTransform().Rotation$0"],
+    "description": "Retreive the rotation of a transform."
+  },
+
+  // CONCURRENCY
+  "Sleep Function": {
+    "prefix": "sl",
+    "body": ["Sleep(${1:0.0})"],
+    "description": "Generate a sleep function."
+  },
+
+  "Sync": {
+    "prefix": "sync",
+    "body": ["${1:SyncResults} := sync:\n\t${2:block:}\n\t${3:block:}$0"],
+    "description": "Sync two or more async expressions."
+  },
+
+  "Race": {
+    "prefix": "race",
+    "body": ["${1:Winner} := race:\n\t${2:block:}\n\t${3:block:}$0"],
+    "description": "Race two or more async expressions."
+  },
+
+  "Rush": {
+    "prefix": "rush",
+    "body": ["${1:RushResults} := rush:\n\t${2:block:}\n\t${3:block:}$0"],
+    "description": "Rush two or more async expressions."
+  },
+
+  "Branch": {
+    "prefix": "branch",
+    "body": ["${1:BranchResults} := branch:\n\t${2:block:}\n\t${3:block:}$0"],
+    "description": "Branch two or more expressions."
+  },
+
+  "Event": {
+    "prefix": "evnt",
+    "body": ["${1:Name} : event($2) = event$3{}\n$0"],
+    "description": "Generates a property."
+  },
+
+  // UTILITY
+  "msg": {
+    "prefix": "msg",
+    "body": [
+      "ToMessage<localizes>(${1:String : string}) : message = \"{${2:String}}\"\n$0"
+    ],
+    "description": "Converts a primitive type into a message."
+  }
 }
