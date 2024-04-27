@@ -236,7 +236,7 @@
   "Event": {
     "prefix": "evt",
     "body": ["${1:Name} : event($2) = event$3(){}\n$0"],
-    "description": "Generates a property."
+    "description": "Creates an event."
   },
 
   // UTILITY
