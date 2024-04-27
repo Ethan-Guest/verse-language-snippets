@@ -45,7 +45,7 @@ A collection of useful code snippets for the Verse programming language.
 | `race`    | Race two or more async expressions            |
 | `rush`    | Rush two or more async expressions            |
 | `branch`  | Branch two or more expressions                |
-| `evnt`    | A parametric event definition                 |
+| `evt`     | Event definition                              |
 | `msg`     | Convert a primitive into a message            |
 
 ## Contributing
