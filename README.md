@@ -11,10 +11,10 @@ A collection of useful code snippets for the Verse programming language.
 | Snippet   | Outputs                                       |
 | --------- | --------------------------------------------- |
 | `edb`     | Editable Property                             |
+| `sub`     | Subscribe to an event                         |
 | `prop`    | Property                                      |
 | `get`     | Property Getter                               |
 | `set`     | Property Setter                               |
-| `sub`     | Subscribe to an event                         |
 | `tag`     | Create a verse tag                            |
 | `tags`    | Retrieve all tagged actors                    |
 | `tgf`     | A function that returns all tagged actors     |
@@ -47,6 +47,7 @@ A collection of useful code snippets for the Verse programming language.
 | `branch`  | Branch two or more expressions                |
 | `evt`     | Event definition                              |
 | `msg`     | Convert a primitive into a message            |
+| `dd`      | Default Device - Less bloated device template |
 
 ## Contributing
 

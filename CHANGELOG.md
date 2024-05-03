@@ -1,11 +1,12 @@
 # Change Log
 
-All notable changes to the "VerseLangSnippets" extension will be documented in this file.
+## [1.2.0] - 2024-5-03
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
+- Add dd - a default verse device template with less bloat
+- Fix event snippet prefix (evnt -> evt)
 
 ## [1.1.0] - 2024-4-23
+
 - Add tgf
 - Add logc
 - Add af
