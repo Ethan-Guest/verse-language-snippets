@@ -244,7 +244,7 @@
   "msg": {
     "prefix": "msg",
     "body": [
-      "ToMessage<localizes>(${1:String : string}) : message = \"{${2:String}}\"\n$0"
+      "${1:StringToMessage}<localizes>(${2:String : string}) : message = \"{${3:String}}\"\n$0"
     ],
     "description": "Converts a primitive type into a message."
   },
