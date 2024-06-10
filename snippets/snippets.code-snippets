@@ -9,7 +9,7 @@
 
   "Editable": {
     "prefix": "edb",
-    "body": ["@editable\n${1:Name} : ${2:type} = ${3:value}{}\n$0"],
+    "body": ["@editable\n${1:Name} : ${2:type} = ${3:value}\n$0"],
     "description": "Generates a property with the @editable attribute."
   },
 
@@ -254,9 +254,9 @@
     "body": [
       "using { /Fortnite.com/Devices }\nusing { /Verse.org/Simulation }\nusing { /UnrealEngine.com/Temporary/Diagnostics }\n",
       "<#> # File: $TM_FILENAME",
-      "\t# Description: ${1:}",
-      "\t# Author: ${2:}",
-      "\t# Created: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+      "\tDescription: ${1:}",
+      "\tAuthor: ${2:}",
+      "\tCreated: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
       "\n${3:$TM_FILENAME_BASE} := class(creative_device):\n\t\n\t\n\tOnBegin<override>()<suspends>:void=\n\t\t${4:block:}"
     ],
     "description": "Create a default verse device class with less bloat."
