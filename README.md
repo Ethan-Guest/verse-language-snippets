@@ -15,6 +15,7 @@ A collection of useful code snippets for the Verse programming language.
 | `prop`    | Property                                      |
 | `get`     | Property Getter                               |
 | `set`     | Property Setter                               |
+| `dd`      | Default Device - Less bloated device template |
 | `tag`     | Create a verse tag                            |
 | `tags`    | Retrieve all tagged actors                    |
 | `tgf`     | A function that returns all tagged actors     |
@@ -47,7 +48,6 @@ A collection of useful code snippets for the Verse programming language.
 | `branch`  | Branch two or more expressions                |
 | `evt`     | Event definition                              |
 | `msg`     | Convert a primitive into a message            |
-| `dd`      | Default Device - Less bloated device template |
 
 ## Contributing
 
