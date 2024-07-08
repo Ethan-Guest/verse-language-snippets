@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.2.3] - 2024-6-10
+- Remove comment from dd
+- Add ddc
+
 ## [1.2.1] - 2024-6-10
 - Remove braces from edb
 - Remove one-line comment tags from dd

@@ -16,6 +16,7 @@ A collection of useful code snippets for the Verse programming language.
 | `get`     | Property Getter                               |
 | `set`     | Property Setter                               |
 | `dd`      | Default Device - Less bloated device template |
+| `ddc`     | Default Device - Device template with comment |
 | `tag`     | Create a verse tag                            |
 | `tags`    | Retrieve all tagged actors                    |
 | `tgf`     | A function that returns all tagged actors     |
