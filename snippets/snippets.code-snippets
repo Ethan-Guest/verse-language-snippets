@@ -254,7 +254,7 @@
     "body": [
       "using { /Fortnite.com/Devices }\nusing { /Verse.org/Simulation }\nusing { /UnrealEngine.com/Temporary/Diagnostics }\n",
       "# Description: ${1:$TM_FILENAME}",
-      "\n${2:$TM_FILENAME_BASE} := class(creative_device):\n\t\n\tOnBegin<override>()<suspends>:void=\n\t${3:block:}"
+      "\n${2:$TM_FILENAME_BASE} := class(creative_device):\n\t\n\tOnBegin<override>()<suspends>:void=\n\t\t${3:block:}"
     ],
     "description": "Create a default verse device class with less bloat."
   },
@@ -263,7 +263,7 @@
     "prefix": "ddc",
     "body": [
       "using { /Fortnite.com/Devices }\nusing { /Verse.org/Simulation }\nusing { /UnrealEngine.com/Temporary/Diagnostics }\n",
-      "\n${1:$TM_FILENAME_BASE} := class(creative_device):\n\t\n\tOnBegin<override>()<suspends>:void=\n\t${4:block:}"
+      "\n${1:$TM_FILENAME_BASE} := class(creative_device):\n\t\n\tOnBegin<override>()<suspends>:void=\n\t\t${4:block:}"
     ],
     "description": "Create a default verse device class with less bloat."
   }
