@@ -19,6 +19,12 @@
     "description": "Subscribe to an event."
   },
 
+  "Await": {
+    "prefix": "awt",
+    "body": ["${1:Device}.${2:Event}.Await()\n$0"],
+    "description": "Awaits an event."
+  },
+
   "Property": {
     "prefix": "prop",
     "body": ["var ${1:Prop} : ${2:type} = ${3:value}$0"],
@@ -93,6 +99,12 @@
     "description": "Generate a suspending function."
   },
 
+  "Create a decides function": {
+    "prefix": "dcd",
+    "body": ["${1:Name}($2)<transacts><decides>:${3:void}=\n\t$0"],
+    "description": "Generate a decides function."
+  },
+
   "Create a function that accepts an agent.": {
     "prefix": "af",
     "body": ["${1:Handler}(${2:InAgent : agent}):${3:void}=\n\t$0"],
@@ -112,9 +124,9 @@
   },
 
   // CONTROL FLOW
-  "For loop over container": {
+  "For loop over collection": {
     "prefix": "foreach",
-    "body": ["for(I->${1:Value} : ${2:Container}):\n\t$0"],
+    "body": ["for(I->${1:Value} : ${2:Collection}):\n\t$0"],
     "description": "Create a foreach expression."
   },
 
@@ -127,7 +139,7 @@
   "For loop with filter": {
     "prefix": "forfil",
     "body": [
-      "for(${1:Value} : ${2:Container}, ${3:Value} <> ${4:Value}):\n\t$0"
+      "for(${1:Value} : ${2:Collection}, ${3:Value} <> ${4:Value}):\n\t$0"
     ],
     "description": "Create a for loop with filter."
   },
