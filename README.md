@@ -12,6 +12,7 @@ A collection of useful code snippets for the Verse programming language.
 | --------- | --------------------------------------------- |
 | `edb`     | Editable Property                             |
 | `sub`     | Subscribe to an event                         |
+| `awt`     | Await an event                                |
 | `prop`    | Property                                      |
 | `get`     | Property Getter                               |
 | `set`     | Property Setter                               |
@@ -19,13 +20,12 @@ A collection of useful code snippets for the Verse programming language.
 | `ddc`     | Default Device - Device template with comment |
 | `tag`     | Create a verse tag                            |
 | `tags`    | Retrieve all tagged actors                    |
-| `tgf`     | A function that returns all tagged actors     |
 | `log`     | Print statement                               |
 | `logc`    | Print statement with color                    |
 | `cast`    | Cast to a type                                |
 | `fun`     | Basic function definition                     |
 | `sus`     | Suspending function                           |
-| `af`      | Function that accepts an agent as parameter   |
+| `af`      | Function with agent parameter                 |
 | `ovr`     | Overriding function                           |
 | `class`   | Create a class                                |
 | `foreach` | For loop over container                       |

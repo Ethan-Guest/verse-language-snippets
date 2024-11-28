@@ -53,20 +53,12 @@
     "description": "Create a tag."
   },
 
-  "Get all tagged objects": {
+  "Get tagged objects": {
     "prefix": "tags",
     "body": [
-      "${1:TaggedActors} := GetCreativeObjectsWithTag(${2:mytag}{})\n$0"
+      "${1:TaggedActors} := Self.FindCreativeObjectsWithTag(${2:mytag}{})\n$0"
     ],
-    "description": "Retrieve all tagged objects."
-  },
-
-  "Create a function that gets and casts actors with a specific tag.": {
-    "prefix": "tgf",
-    "body": [
-      "${1:GetActors}()<transacts>:[]${2:type}=\n\tvar ReturnArray : []${2:type} = array{}\n\tfor(Actor : GetCreativeObjectsWithTag(${3:my_tag}{})):\n\t\tif(CastedActor := ${2:type}[Actor]):\n\t\t\tset ReturnArray += array{CastedActor}\n\tReturnArray$0"
-    ],
-    "description": "Retrieve all tagged actors in a function."
+    "description": "Retrieve tagged objects."
   },
 
   "Print statement": {
